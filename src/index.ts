@@ -6,6 +6,8 @@ import { insertionSort } from "./sort/insertionSort";
 const testArray = [5, 3, 8, 4, 6];
 console.log(`test array: [${testArray}]`);
 
+//==>  sorting <==
+
 // buble sort O(nˆ2)
 console.log(`buble sort:`);
 console.log(bubbleSort(testArray));
@@ -13,6 +15,8 @@ console.log(bubbleSort(testArray));
 // insertion sort O(nˆ2)
 console.log(`insertion sort:`);
 console.log(insertionSort(testArray));
+
+//==>  searching <==
 
 // linear search O(n)
 console.log(`linear search:`);
