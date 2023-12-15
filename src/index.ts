@@ -3,6 +3,7 @@ import { linearSearch } from "./search/linearSearch";
 import { bubbleSort } from "./sort/bubbleSort";
 import { insertionSort } from "./sort/insertionSort";
 import { mergeSort } from "./sort/mergeSort";
+import { quickSort } from "./sort/quickSort";
 import { selectionSort } from "./sort/selectionSort";
 
 // const testArray = [5, 3, 8, 4, 6];
@@ -23,9 +24,13 @@ console.log(insertionSort(testArray));
 console.log(`selection sort:`);
 console.log(selectionSort(testArray));
 
-// selection sort O(n*log(n))
+// merge sort O(n*log(n))
 console.log(`merge sort:`);
 console.log(mergeSort(testArray));
+
+// quick sort O(nˆ2)
+console.log(`quick sort:`);
+console.log(quickSort(testArray, 0, testArray.length - 1));
 
 //==>  searching <==
 
