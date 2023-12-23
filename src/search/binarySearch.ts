@@ -20,3 +20,20 @@ export function binarySearch(array: Array<any>, item: any) {
   }
   return position;
 }
+
+export function recursiveBinarySearch(
+  array: Array<any>,
+  item: any,
+  start: number,
+  end: number
+) {
+  let middle = Math.floor((start + end) / 2);
+  if (item === array[middle]) {
+    return middle;
+  }
+  if (item < array[middle]) {
+    return recursiveBinarySearch(array, item, start, middle - 1);
+  } else {
+    return recursiveBinarySearch(array, item, middle + 1, end);
+  }
+}

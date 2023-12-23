@@ -1,6 +1,6 @@
 import { factorial } from "./recursion/factorial";
 import { fibonachi } from "./recursion/fibonachi";
-import { binarySearch } from "./search/binarySearch";
+import { binarySearch, recursiveBinarySearch } from "./search/binarySearch";
 import { linearSearch } from "./search/linearSearch";
 import { bubbleSort } from "./sort/bubbleSort";
 import { insertionSort } from "./sort/insertionSort";
@@ -43,6 +43,10 @@ console.log(linearSearch(testArray, 6));
 // binary search O(log2n)
 console.log(`binary search:`);
 console.log(binarySearch(testArray, 6));
+
+// recursive binary search O(log2n)
+console.log(`recursive binary search:`);
+console.log(recursiveBinarySearch(testArray, 6, 0, testArray.length));
 
 //==> recursion test <===
 
