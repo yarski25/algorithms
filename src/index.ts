@@ -1,3 +1,4 @@
+import { breadthSearch } from "./graph/breadthSearch";
 import { factorial } from "./recursion/factorial";
 import { fibonachi } from "./recursion/fibonachi";
 import { binarySearch, recursiveBinarySearch } from "./search/binarySearch";
@@ -57,3 +58,19 @@ console.log(factorial(5));
 // fibonaci implementation
 console.log(`fibonaci function:`);
 console.log(fibonachi(7));
+
+//===> graph search <===
+
+// graph search
+
+// graph includes only from left to right;
+type Graph = { [key: string]: Array<string> };
+const graph: Graph = {};
+graph.a = ["b", "c"];
+graph.b = ["f"];
+graph.c = ["d", "e"];
+graph.d = ["f"];
+graph.e = ["f"];
+graph.f = ["g"];
+console.log(`graph search from left to right:`);
+console.log(breadthSearch(graph, "a", "g"));
