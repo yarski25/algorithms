@@ -30,7 +30,6 @@ export function quickSort(items: Array<number>, left: number, right: number) {
   if (items.length > 1) {
     //get the left pointer returned
     index = partition(items, left, right);
-
     if (left < index - 1) {
       // more elements on the left side
       quickSort(items, left, index - 1);
@@ -41,7 +40,6 @@ export function quickSort(items: Array<number>, left: number, right: number) {
       quickSort(items, index, right);
     }
   }
-
   // return the sorted array
   return items;
 }

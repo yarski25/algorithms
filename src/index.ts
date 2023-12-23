@@ -1,3 +1,5 @@
+import { factorial } from "./recursion/factorial";
+import { fibonachi } from "./recursion/fibonachi";
 import { binarySearch } from "./search/binarySearch";
 import { linearSearch } from "./search/linearSearch";
 import { bubbleSort } from "./sort/bubbleSort";
@@ -28,7 +30,7 @@ console.log(selectionSort(testArray));
 console.log(`merge sort:`);
 console.log(mergeSort(testArray));
 
-// quick sort O(nˆ2)
+// quick sort O(nˆ2) avg O(nlogn)
 console.log(`quick sort:`);
 console.log(quickSort(testArray, 0, testArray.length - 1));
 
@@ -41,3 +43,13 @@ console.log(linearSearch(testArray, 6));
 // binary search O(log2n)
 console.log(`binary search:`);
 console.log(binarySearch(testArray, 6));
+
+//==> recursion test <===
+
+// factorial implementation
+console.log(`factorial function:`);
+console.log(factorial(5));
+
+// fibonaci implementation
+console.log(`fibonaci function:`);
+console.log(fibonachi(7));
