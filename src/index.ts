@@ -1,4 +1,5 @@
 import { breadthSearch } from "./graph/breadthSearch";
+import { dijkstraSearch } from "./graph/dijkstraSearch";
 import { factorial } from "./recursion/factorial";
 import { fibonachi } from "./recursion/fibonachi";
 import { binarySearch, recursiveBinarySearch } from "./search/binarySearch";
@@ -74,3 +75,30 @@ graph.e = ["f"];
 graph.f = ["g"];
 console.log(`graph search from left to right:`);
 console.log(breadthSearch(graph, "a", "g"));
+
+// adjacency matrix to such graph case
+const adjMatrix = [
+  [0, 1, 1, 0, 0, 0, 0],
+  [0, 0, 0, 0, 1, 0, 0],
+  [0, 0, 0, 1, 0, 1, 0],
+  [0, 0, 0, 0, 1, 0, 0],
+  [0, 0, 0, 0, 0, 0, 1],
+  [0, 0, 0, 0, 1, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+];
+
+// dijkstra shortest path
+type Node = { [key: string]: number };
+type GraphDist = { [key: string]: Node };
+
+const graphDist: GraphDist = {};
+graphDist.a = { b: 2, c: 1 };
+graphDist.b = { f: 7 };
+graphDist.c = { d: 5, e: 2 };
+graphDist.d = { f: 2 };
+graphDist.e = { f: 1 };
+graphDist.f = { g: 1 };
+graphDist.g = {};
+
+console.log(`graph search from left to right:`);
+console.log(dijkstraSearch(graphDist, "a", "g"));
