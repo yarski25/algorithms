@@ -9,6 +9,7 @@ import { insertionSort } from "./sort/insertionSort";
 import { mergeSort } from "./sort/mergeSort";
 import { quickSort } from "./sort/quickSort";
 import { selectionSort } from "./sort/selectionSort";
+import { iteration, recursive } from "./tree/treeTraversal";
 
 // const testArray = [5, 3, 8, 4, 6];
 const testArray = [16, 8, 4, 2, 1, 3, 6, 5, 7, 11, 9, 10, 13, 12, 15, 14];
@@ -102,3 +103,49 @@ graphDist.g = {};
 
 console.log(`graph search from left to right:`);
 console.log(dijkstraSearch(graphDist, "a", "g"));
+
+//===> tree algorithms <===
+
+const tree = [
+  {
+    v: 5,
+    c: [
+      {
+        v: 10,
+        c: [
+          {
+            v: 11,
+          },
+        ],
+      },
+      {
+        v: 7,
+        c: [
+          {
+            v: 5,
+            c: [
+              {
+                v: 1,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    v: 5,
+    c: [
+      {
+        v: 10,
+      },
+      {
+        v: 15,
+      },
+    ],
+  },
+];
+
+console.log(`tree algorithm:`);
+console.log(recursive(tree));
+console.log(iteration(tree));
