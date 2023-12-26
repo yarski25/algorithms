@@ -1,5 +1,6 @@
 import { breadthSearch } from "./graph/breadthSearch";
 import { dijkstraSearch } from "./graph/dijkstraSearch";
+import { cashFunction, factorial2 } from "./other/cash";
 import { factorial } from "./recursion/factorial";
 import { fibonachi } from "./recursion/fibonachi";
 import { binarySearch, recursiveBinarySearch } from "./search/binarySearch";
@@ -149,3 +150,15 @@ const tree = [
 console.log(`tree algorithm:`);
 console.log(recursive(tree));
 console.log(iteration(tree));
+
+//===> cash functions <===
+
+console.log(`cash function:`);
+const cashFactorial = cashFunction(factorial2);
+cashFactorial(5);
+cashFactorial(4);
+cashFactorial(3);
+cashFactorial(4);
+cashFactorial(5);
+cashFactorial(1);
+// console.log(factorial2(5));
