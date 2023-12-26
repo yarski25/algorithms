@@ -10,6 +10,7 @@ import { insertionSort } from "./sort/insertionSort";
 import { mergeSort } from "./sort/mergeSort";
 import { quickSort } from "./sort/quickSort";
 import { selectionSort } from "./sort/selectionSort";
+import { LinkedList } from "./structures/linkedList";
 import { iteration, recursive } from "./tree/treeTraversal";
 
 // const testArray = [5, 3, 8, 4, 6];
@@ -161,4 +162,16 @@ cashFactorial(3);
 cashFactorial(4);
 cashFactorial(5);
 cashFactorial(1);
-// console.log(factorial2(5));
+
+//===> structures <===
+
+// linked list
+console.log(`linked list:`);
+const list = new LinkedList();
+list.add(5);
+list.add(3);
+list.add(2);
+list.add(5);
+list.add(7);
+
+list.print();
