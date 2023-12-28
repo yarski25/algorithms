@@ -10,6 +10,7 @@ import { insertionSort } from "./sort/insertionSort";
 import { mergeSort } from "./sort/mergeSort";
 import { quickSort } from "./sort/quickSort";
 import { selectionSort } from "./sort/selectionSort";
+import { BinaryTree } from "./structures/binaryTree";
 import { LinkedList } from "./structures/linkedList";
 import { iteration, recursive } from "./tree/treeTraversal";
 
@@ -175,3 +176,14 @@ list.add(5);
 list.add(7);
 
 list.print();
+
+// binary tree search
+console.log(`binary tree search:`);
+const binTree = new BinaryTree();
+binTree.add(5);
+binTree.add(2);
+binTree.add(6);
+binTree.add(2);
+binTree.add(1);
+
+binTree.print();
